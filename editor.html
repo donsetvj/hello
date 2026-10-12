@@ -33,7 +33,7 @@ main{height:calc(100% - 58px);padding:12px;min-height:0}
 .panel-head-right{display:flex;align-items:center;gap:9px;min-width:0}
 .preview-size{font-size:11px;font-variant-numeric:tabular-nums;color:#69768a;white-space:nowrap}
 .editor-wrap{flex:1;min-height:0;overflow:hidden;background:var(--editor-bg)}
-.CodeMirror{height:100%;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;background:#fff;color:#222b38;padding-top:8px}
+.CodeMirror{height:100%;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;background:#fff;color:#222b38;padding-top:8px}.CodeMirror-scroll{overflow-x:hidden!important;overflow-y:auto!important}.CodeMirror-sizer{min-width:0!important}.CodeMirror-lines{overflow-wrap:anywhere;word-break:normal}
 .CodeMirror-gutters{background:#f8faff;border-right:1px solid #e7ebf2}
 .CodeMirror-linenumber{color:#a0a8b7;padding:0 8px 0 6px}
 .CodeMirror-cursor{border-left:1.5px solid #1d4ed8}
@@ -194,7 +194,7 @@ main{height:calc(100% - 58px);padding:12px;min-height:0}
       indentUnit: 2,
       tabSize: 2,
       indentWithTabs: false,
-      lineWrapping: false,
+      lineWrapping: true,
       viewportMargin: 30,
       extraKeys: {
         "Ctrl-Enter": runCode,
