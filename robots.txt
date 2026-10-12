@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# The page declares noindex, nofollow, and noarchive in its HTML metadata.
+# Crawlers need to fetch the page to see and honor those directives.
