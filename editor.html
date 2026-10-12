@@ -38,19 +38,57 @@ main{height:calc(100% - 58px);padding:12px;min-height:0}
 .CodeMirror-linenumber{color:#a0a8b7;padding:0 8px 0 6px}
 .CodeMirror-cursor{border-left:1.5px solid #1d4ed8}
 .CodeMirror-selected{background:#dceaff!important}
+.cm-s-eclipse .cm-comment{color:#7b8798;font-style:italic}
+.cm-s-eclipse .cm-m-xml.cm-tag{color:#b4235a;font-weight:650}
+.cm-s-eclipse .cm-m-xml.cm-bracket{color:#7c3aed}
+.cm-s-eclipse .cm-m-xml.cm-attribute{color:#9a3412}
+.cm-s-eclipse .cm-m-xml.cm-string{color:#067647}
+.cm-s-eclipse .cm-m-xml.cm-meta{color:#667085;font-style:italic}
+.cm-s-eclipse .cm-m-xml.cm-atom{color:#b45309}
+.cm-s-eclipse .cm-m-xml.cm-number{color:#b45309}
+
+.cm-s-eclipse .cm-m-css.cm-tag{color:#9d3e8a;font-weight:600}
+.cm-s-eclipse .cm-m-css.cm-qualifier{color:#087e78;font-weight:650}
+.cm-s-eclipse .cm-m-css.cm-property{color:#175cd3}
+.cm-s-eclipse .cm-m-css.cm-keyword{color:#7c3aed}
+.cm-s-eclipse .cm-m-css.cm-atom{color:#b45309}
+.cm-s-eclipse .cm-m-css.cm-number{color:#b45309}
+.cm-s-eclipse .cm-m-css.cm-string{color:#067647}
+.cm-s-eclipse .cm-m-css.cm-variable{color:#7c3aed}
+.cm-s-eclipse .cm-m-css.cm-variable-2{color:#7c3aed}
+.cm-s-eclipse .cm-m-css.cm-def{color:#0f766e}
+.cm-s-eclipse .cm-m-css.cm-important{color:#c2410c;font-weight:750}
+.cm-s-eclipse .cm-m-css.cm-operator{color:#68758a}
+.cm-s-eclipse .cm-m-css.cm-builtin{color:#087e78}
+.cm-s-eclipse .cm-m-css.cm-error{color:#b42318;text-decoration:underline wavy #b42318}
+
+.cm-s-eclipse .cm-m-javascript.cm-keyword{color:#7c3aed;font-weight:650}
+.cm-s-eclipse .cm-m-javascript.cm-atom{color:#b45309;font-weight:600}
+.cm-s-eclipse .cm-m-javascript.cm-number{color:#b45309}
+.cm-s-eclipse .cm-m-javascript.cm-def{color:#175cd3;font-weight:650}
+.cm-s-eclipse .cm-m-javascript.cm-variable{color:#293548}
+.cm-s-eclipse .cm-m-javascript.cm-variable-2{color:#087e78}
+.cm-s-eclipse .cm-m-javascript.cm-variable-3{color:#9d3e8a}
+.cm-s-eclipse .cm-m-javascript.cm-property{color:#175cd3}
+.cm-s-eclipse .cm-m-javascript.cm-operator{color:#667085}
+.cm-s-eclipse .cm-m-javascript.cm-string{color:#067647}
+.cm-s-eclipse .cm-m-javascript.cm-string-2{color:#0f766e}
+.cm-s-eclipse .cm-m-javascript.cm-builtin{color:#b54708}
+.cm-s-eclipse .cm-m-javascript.cm-meta{color:#667085}
+.cm-s-eclipse .cm-m-javascript.cm-error{color:#b42318;text-decoration:underline wavy #b42318}
+
 .cm-s-eclipse .cm-keyword{color:#7c3aed}
 .cm-s-eclipse .cm-atom{color:#b45309}
 .cm-s-eclipse .cm-number{color:#b45309}
-.cm-s-eclipse .cm-def{color:#075eaf}
-.cm-s-eclipse .cm-variable{color:#273444}
-.cm-s-eclipse .cm-variable-2{color:#0f766e}
-.cm-s-eclipse .cm-property{color:#075eaf}
-.cm-s-eclipse .cm-operator{color:#536178}
-.cm-s-eclipse .cm-string{color:#16803c}
-.cm-s-eclipse .cm-comment{color:#8993a4;font-style:italic}
-.cm-s-eclipse .cm-tag{color:#c24164}
-.cm-s-eclipse .cm-attribute{color:#9a4b11}
-.cm-s-eclipse .cm-builtin{color:#7c3aed}
+.cm-s-eclipse .cm-def{color:#175cd3}
+.cm-s-eclipse .cm-variable{color:#293548}
+.cm-s-eclipse .cm-variable-2{color:#087e78}
+.cm-s-eclipse .cm-property{color:#175cd3}
+.cm-s-eclipse .cm-operator{color:#667085}
+.cm-s-eclipse .cm-string{color:#067647}
+.cm-s-eclipse .cm-tag{color:#b4235a}
+.cm-s-eclipse .cm-attribute{color:#9a3412}
+.cm-s-eclipse .cm-builtin{color:#b54708}
 .preview-wrap{position:relative;flex:1;min-height:0;overflow:hidden;background:#fff}
 .preview-frame{display:block;width:100%;height:100%;border:0;background:#fff}
 .splitter{position:relative;display:flex;align-items:center;justify-content:center;min-width:8px;cursor:col-resize;touch-action:none;outline:none}
@@ -190,6 +228,7 @@ main{height:calc(100% - 58px);padding:12px;min-height:0}
     editor = CodeMirror.fromTextArea(textarea, {
       mode: "htmlmixed",
       theme: "eclipse",
+      addModeClass: true,
       lineNumbers: true,
       indentUnit: 2,
       tabSize: 2,
